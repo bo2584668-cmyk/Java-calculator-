@@ -1,38 +1,24 @@
 h1 {
-    color: #1d4ecd;
-    text-align: center;
-    padding: 32px;
+    color:#1d4ecd;
+    padding:32px;
+    text-align:center;
+    
 }
-
 p {
-    color: #1d4ecd;
-    font-weight: bold;
-    font-size: 18px;
+    color:#1d4ecd;
+    font-weight :bold;
 }
-
 button {
-    background-color: #1d4ecd;
-    color: white;
-    padding: 10px 20px;
-    border: 2px solid #1d4e28;
-    border-bottom: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
+    
+    color:white;
+    padding:10px 10px;
+    border-color:#1d4e28;
+    border-bottom:none;
+    border-radius:10px;
+    background-color:#1d4ecd;
 }
-
-button:hover {
-    background-color: #14358a;
-}
-
 input {
-    padding: 8px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    outline: none;
-    transition: 0.3s;
-}
+    border-radius:10px;
+    padding:8px;
 
-input:focus {
-    border-color: #1d4ecd;
 }
