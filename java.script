@@ -1,20 +1,41 @@
-console.log("java conected");
-let birthyearinput = document.getElementById("birthyear");
-let button = document.getElementById("calculateBtn");
-let result = document.getElementById("result");
-
-
-button.addEventListener("click", function() {
+let title = document.getElementById("title");
+let taskinput = document.getElementById("taskinput");
+let addBtn = document.getElementById("addBtn");
+let message = document.getElementById("message");
+let Taskcount = document.getElementById("Taskcount");
+let tasklink = document.getElementById("tasklist");
+let count = 0;
+addBtn.addEventListener("click", function() {
+   let tasktext = taskinput.value
+if (tasktext === ""){
+message.textContent= "Please Enter Your Task ";
+return;
     
-    let birthyear = birthyearinput.value;
-    let age = 2026 - birthyear;
-    if(birthyear  === ""){
-        result.textContent="please enter your birthyear"
-        return;
-    }
-    result.textContent = "your age is" + age;
-console.log(birthyear);
-})
-    
+}
+let li = document.createElement("li");
+let taskspan = document.createElement("span");
+taskspan.textContent = tasktext;
+let noteinput = document.createElement("input");
+noteinput.type="text";
+noteinput.placeholder="add a note";
+let deleteBtn = document.createElement("button");
+deleteBtn.textContent = "delete";
+deleteBtn.className = "delete-btn";
+li.appendChild(taskspan);
+li.appendChild(noteinput)
+li.appendChild(deleteBtn);
+tasklist.appendChild(li);
 
-    
+message.textContent = "Task Added Successfully";
+    count++;
+
+Taskcount.textContent = count;
+
+    taskinput.value="";
+    deleteBtn.addEventListener("click", function() {
+    li.remove();
+    count--;
+   Taskcount.textContent = count;
+   message.textContent ="task delete";
+    });
+});
